@@ -106,11 +106,11 @@ if (cmd === "ban")
   let banEmbed = new Discord.RichEmbed()
   .setDescription("~Ban~")
   .setColor("#bc0000")
-  .addField("Zbanowany Użytkownik", `${bUser} ID ${bUser.id}`)
-  .addField("Zbanowany Przez", `${message.author} ID ${message.author.id}`)
-  .addField("Zbanowany z", message.channel)
-  .addField("Czas", message.createdAt)
-  .addField("Powód", bReason);
+  .addField("Banned User", `${bUser} ID ${bUser.id}`)
+  .addField("Banned in", `${message.author} ID ${message.author.id}`)
+  .addField("Channel", message.channel)
+  .addField("Time", message.createdAt)
+  .addField("Reason", bReason);
 
   let banChannel = message.guild.channels.find(`name`, "log")
 
@@ -145,11 +145,11 @@ if (cmd === "ban")
   let kickEmbed = new Discord.RichEmbed()
   .setDescription("~Kick~")
   .setColor("e56b00")
-  .addField("Wyrzucony Użytkownik", `${kUser} ID ${kUser.id}`)
-  .addField("Wyrzucony Przez", `${message.author} ID ${message.author.id}`)
-  .addField("Wyrzucony z", message.channel)
-  .addField("Czas", message.createdAt)
-  .addField("Powód", kReason);
+  .addField("Kick'ed User", `${kUser} ID ${kUser.id}`)
+  .addField("Kick'ed in", `${message.author} ID ${message.author.id}`)
+  .addField("Channel", message.channel)
+  .addField("Time", message.createdAt)
+  .addField("Reason", kReason);
 
   let kickChannel = message.guild.channels.find(`name`, "log")
 
